@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="{{ '/feed.xsl' | relative_url }}"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | strip_newlines | xml_escape }}</description>
+    <link>{{ '/blog/' | absolute_url }}</link>
+    <atom:link href="{{ '/feed.xml' | absolute_url }}" rel="self" type="application/rss+xml"/>
+    <language>{{ site.lang }}</language>
+    {% if site.posts.first %}<lastBuildDate>{{ site.posts.first.date | date_to_rfc822 }}</lastBuildDate>{% endif %}
+    {% for post in site.posts limit: 20 %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ post.url | absolute_url }}</link>
+      <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <author>{{ site.email | xml_escape }} ({{ site.author | xml_escape }})</author>
+      <description>{% if post.summary %}{{ post.summary | strip_newlines | xml_escape }}{% else %}{{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}{% endif %}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

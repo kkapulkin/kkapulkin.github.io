@@ -1,0 +1,65 @@
+---
+layout: default
+title: null
+permalink: /blog/
+description: >-
+  Left for the Reader — Chris Kapulkin's soapbox. Essays and notes on
+  mathematics, AI, and the profession.
+---
+
+<section class="lftr-hero">
+  <div class="wrap">
+    <div class="lftr-hero-grid">
+      <div class="reveal in">
+        <p class="eyebrow">Blog</p>
+        <h1 class="lftr-title">Left <span class="accent">for the</span> Reader</h1>
+        <p class="lftr-tagline">{{ site.tagline }}</p>
+        <p class="lftr-sub">
+          <a class="btn ghost" href="{{ '/feed.xml' | relative_url }}">RSS feed</a>
+        </p>
+      </div>
+
+      <figure class="figure-frame lftr-figure reveal in">
+        {% include hero-figure.html %}
+        <figcaption><span>fig. — the rest is left to the reader</span><span>□</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="lftr-archive">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Posts</p>
+    </div>
+
+    {% if site.posts.size == 0 %}
+      <p class="lftr-empty">Nothing here yet. The first post is left as an exercise.</p>
+    {% else %}
+      <div class="lftr-list">
+        {% for post in site.posts %}
+          <article class="lftr-item reveal">
+            <a class="lftr-item-link" href="{{ post.url | relative_url }}">
+              <p class="lftr-when">
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+              </p>
+              <div class="lftr-item-body">
+                <h2>{{ post.title }}</h2>
+                <p class="lftr-excerpt">
+                  {%- if post.summary -%}
+                    {{ post.summary }}
+                  {%- else -%}
+                    {{ post.excerpt | strip_html | normalize_whitespace | truncate: 260 }}
+                  {%- endif -%}
+                </p>
+                <p class="lftr-more">Read <span aria-hidden="true">→</span></p>
+              </div>
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>

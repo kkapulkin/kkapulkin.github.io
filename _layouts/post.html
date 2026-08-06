@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-head">
+    <div class="wrap">
+      <div class="post-head-inner">
+        <p class="eyebrow"><a href="{{ '/blog/' | relative_url }}" class="eyebrow-back">Left for the Reader</a></p>
+        <h1 itemprop="headline">{{ page.title }}</h1>
+        <p class="post-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+          <span class="dot">·</span>
+          <span>{{ content | number_of_words | divided_by: 220 | plus: 1 }} min read</span>
+          {% if page.subtitle %}<span class="dot">·</span><span>{{ page.subtitle }}</span>{% endif %}
+        </p>
+      </div>
+    </div>
+    <div class="wrap"><div class="post-rule"></div></div>
+  </header>
+
+  <div class="wrap">
+    <div class="post-body prose-long" itemprop="articleBody">
+      {{ content }}
+      <p class="halmos" aria-hidden="true">&#9633;</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="post-nav" aria-label="More posts">
+      {% if page.previous %}
+        <a class="post-nav-item prev" href="{{ page.previous.url | relative_url }}">
+          <span class="k">← Previous</span>
+          <span class="t">{{ page.previous.title }}</span>
+        </a>
+      {% else %}<span class="post-nav-item empty"></span>{% endif %}
+
+      {% if page.next %}
+        <a class="post-nav-item next" href="{{ page.next.url | relative_url }}">
+          <span class="k">Next →</span>
+          <span class="t">{{ page.next.title }}</span>
+        </a>
+      {% else %}<span class="post-nav-item empty"></span>{% endif %}
+    </nav>
+
+    <p class="post-back"><a href="{{ '/blog/' | relative_url }}">All posts</a></p>
+  </div>
+
+</article>
+
+{% include mathjax.html %}

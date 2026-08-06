@@ -1,0 +1,14 @@
+# Jekyll build output — GitHub Pages builds the site itself,
+# so the generated copy never needs to be committed.
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Local Ruby setup, if you ever run `bundle` to preview
+.bundle/
+vendor/
+Gemfile.lock
+
+# macOS
+.DS_Store
