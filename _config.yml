@@ -1,0 +1,45 @@
+# ============================================================
+#  Left for the Reader — blog configuration
+#
+#  GitHub Pages builds this automatically on every push.
+#  You should not need to touch this file to publish a post;
+#  see NEW-POST.md for how to add one.
+# ============================================================
+
+title:    "Left for the Reader"
+tagline:  "Chris Kapulkin's soapbox"
+author:   "Chris Kapulkin"
+email:    "krzysztof.r.kapulkin@vanderbilt.edu"
+url:      "https://kkapulkin.github.io"
+baseurl:  ""
+lang:     "en"
+
+description: >-
+  Essays and notes by Chris Kapulkin on mathematics, AI, and
+  the profession — the parts usually left as an exercise.
+
+# --- posts ---------------------------------------------------
+# Posts live in _posts/ and land at /blog/<their-slug>/
+permalink: /blog/:title/
+
+# Show posts dated in the future (handy if you write ahead).
+future: false
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  # Leave $$...$$ untouched so MathJax renders it in the browser.
+  math_engine: null
+  syntax_highlighter: rouge
+  smart_quotes: ["lsquo", "rsquo", "ldquo", "rdquo"]
+
+# Excerpts on the index page: everything up to the first blank line.
+excerpt_separator: "\n\n"
+
+# Files that are part of the main site, not the blog build.
+exclude:
+  - README.md
+  - NEW-POST.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

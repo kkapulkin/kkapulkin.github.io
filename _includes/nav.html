@@ -1,0 +1,15 @@
+<header class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="{{ '/index.html' | relative_url }}"><span class="glyph" data-fig="glyph"></span> Chris Kapulkin</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav-links" id="nav" aria-label="Primary">
+      <a href="{{ '/index.html' | relative_url }}">Home</a>
+      <a href="{{ '/publications.html' | relative_url }}">Publications</a>
+      <a href="{{ '/teaching.html' | relative_url }}">Teaching</a>
+      <a href="{{ '/supervision.html' | relative_url }}">Supervision</a>
+      <a href="{{ '/media-videos-notes.html' | relative_url }}">Media</a>
+      <a href="{{ '/blog/' | relative_url }}"{% if page.url == '/blog/' %} aria-current="page"{% else %} aria-current="true"{% endif %}>Blog</a>
+      <a href="{{ '/cv.html' | relative_url }}">CV</a>
+    </nav>
+  </div>
+</header>

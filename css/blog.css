@@ -1,0 +1,301 @@
+/* ============================================================
+   Left for the Reader — blog styles
+   Layered on top of css/style.css; inherits the site's
+   "chalk on slate" palette, type scale and rhythm.
+   Nothing here overrides the main site's own pages.
+   ============================================================ */
+
+:root{
+  /* Long-form reading needs a touch more light than the site's
+     secondary text, and a measure that stays near 70 characters. */
+  --read:      #d6dde6;
+  --read-size: clamp(1.05rem, 1rem + 0.28vw, 1.16rem);
+  --measure:   38rem;
+}
+
+/* Post pages are "in" the blog section but aren't the blog index, so they
+   carry aria-current="true" rather than "page". Highlight either. */
+.nav-links a[aria-current]{color:var(--ochre)}
+
+/* ---------- masthead ---------- */
+.lftr-hero{padding-top:clamp(2.25rem,5vw,4rem);padding-bottom:clamp(2.25rem,5vw,4rem);overflow:hidden}
+.lftr-hero-grid{
+  display:grid;grid-template-columns:1fr .95fr;
+  gap:clamp(2rem,5vw,4rem);align-items:center;
+}
+@media (max-width:900px){.lftr-hero-grid{grid-template-columns:1fr;gap:2.25rem}}
+
+.lftr-title{
+  font-size:var(--step-3);
+  font-weight:500;
+  letter-spacing:-.02em;
+  line-height:1.02;
+}
+.lftr-title .accent{color:var(--ochre);font-style:italic;font-weight:400}
+
+.lftr-tagline{
+  font-family:'Spline Sans Mono',monospace;
+  font-size:var(--step--1);
+  letter-spacing:.06em;
+  color:var(--chalk-dim);
+  margin-top:1rem;
+}
+.lftr-sub{margin-top:1.9rem}
+
+/* ---------- masthead figure ---------- */
+.lftr-figure{padding:1.35rem 1.25rem 1.1rem}
+.lftr-hero-svg{display:block;width:100%;height:auto}
+/* The open box ticks slowly anticlockwise. The offset is a whole number of
+   dash periods (4 × 14) so the loop restarts without a visible jump. */
+.lftr-hero-svg .lftr-box{animation:lftr-drift 9s linear infinite}
+@keyframes lftr-drift{to{stroke-dashoffset:-56}}
+@media (prefers-reduced-motion:reduce){
+  .lftr-hero-svg .lftr-box{animation:none}
+}
+
+/* ---------- /feed.xml, when a person opens it ---------- */
+.feed-hero{padding-bottom:clamp(1.75rem,4vw,3rem)}
+.feed-note{
+  max-width:52ch;
+  color:var(--chalk-dim);
+  margin-top:1.25rem;
+}
+.feed-note a{
+  color:var(--ochre);
+  text-decoration:underline;
+  text-underline-offset:3px;
+  text-decoration-color:color-mix(in srgb,var(--ochre) 42%,transparent);
+}
+.feed-note a:hover{text-decoration-color:var(--ochre)}
+.feed-url{margin-top:1.25rem}
+.feed-url code{
+  font-family:'Spline Sans Mono',monospace;
+  font-size:.85rem;
+  color:var(--chalk);
+  background:var(--ink-2);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:.6rem .85rem;
+  display:inline-block;
+  max-width:100%;
+  overflow-wrap:break-word;
+  user-select:all;   /* one click selects the whole address */
+}
+
+/* ---------- the archive ---------- */
+.lftr-archive{padding-top:clamp(2.5rem,5vw,4rem)}
+.lftr-empty{color:var(--chalk-faint);font-family:'Spline Sans Mono',monospace;font-size:var(--step--1)}
+
+.lftr-list{border-top:1px solid var(--line)}
+.lftr-item{border-bottom:1px solid var(--line)}
+.lftr-item-link{
+  display:grid;grid-template-columns:11rem 1fr;gap:1.5rem;
+  padding:1.9rem .25rem;
+  align-items:start;
+  border-radius:10px;
+  transition:background .18s;
+}
+.lftr-item-link:hover{background:var(--ink-2)}
+.lftr-when{
+  font-family:'Spline Sans Mono',monospace;
+  font-size:.78rem;letter-spacing:.04em;
+  color:var(--ochre);
+  margin:.45rem 0 0;
+  white-space:nowrap;
+}
+.lftr-item-body h2{
+  font-size:var(--step-2);
+  font-weight:600;
+  line-height:1.15;
+  letter-spacing:-.01em;
+  margin:0 0 .55rem;
+  transition:color .18s;
+}
+.lftr-item-link:hover .lftr-item-body h2{color:var(--ochre)}
+.lftr-excerpt{
+  color:var(--chalk-dim);
+  max-width:62ch;
+  margin:0;
+}
+.lftr-more{
+  font-family:'Spline Sans Mono',monospace;
+  font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--chalk-faint);
+  margin:.9rem 0 0;
+  transition:color .18s;
+}
+.lftr-item-link:hover .lftr-more{color:var(--ochre)}
+@media (max-width:720px){
+  .lftr-item-link{grid-template-columns:1fr;gap:.55rem;padding:1.5rem .25rem}
+  .lftr-when{margin:0}
+}
+
+/* ============================================================
+   A single post
+   ============================================================ */
+.post-head{padding-top:clamp(2.25rem,5vw,3.5rem)}
+.post-head-inner{max-width:var(--measure)}
+.post-head h1{
+  font-size:var(--step-3);
+  font-weight:500;
+  letter-spacing:-.02em;
+  line-height:1.06;
+  margin-top:.2rem;
+}
+.eyebrow-back{color:var(--ochre)}
+.eyebrow-back:hover{text-decoration:underline;text-underline-offset:3px}
+.post-meta{
+  font-family:'Spline Sans Mono',monospace;
+  font-size:.78rem;letter-spacing:.05em;
+  color:var(--chalk-faint);
+  margin:1.15rem 0 0;
+  display:flex;flex-wrap:wrap;gap:.55rem;align-items:baseline;
+}
+.post-meta .dot{opacity:.5}
+.post-rule{
+  height:1px;margin-top:2.1rem;
+  background:linear-gradient(90deg,var(--ochre),var(--line) 22%,var(--line));
+  max-width:var(--measure);
+}
+
+/* ---------- the reading column ---------- */
+.post-body{
+  max-width:var(--measure);
+  font-size:var(--read-size);
+  line-height:1.72;
+  color:var(--read);
+  padding-bottom:1rem;
+  /* keep long formulas and code from widening the page on phones */
+  overflow-wrap:break-word;
+}
+.post-body > p{margin:0 0 1.35em}
+
+/* opening paragraph reads a little larger */
+.post-body > p:first-of-type{
+  font-size:1.06em;
+  color:var(--chalk);
+}
+
+/* run-in emphasis: "**Point being made.** Then the argument…" */
+.post-body strong{color:var(--chalk);font-weight:600}
+.post-body em{color:inherit}
+
+.post-body h2,.post-body h3,.post-body h4{
+  color:var(--chalk);
+  margin:2.4em 0 .6em;
+  line-height:1.2;
+}
+.post-body h2{font-size:1.5em;letter-spacing:-.01em}
+.post-body h3{font-size:1.18em}
+.post-body h4{font-size:1.02em;font-family:'Spline Sans Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--ochre);font-weight:500}
+
+.post-body a{
+  color:var(--ochre);
+  text-decoration:underline;
+  text-underline-offset:3px;
+  text-decoration-thickness:1px;
+  text-decoration-color:color-mix(in srgb,var(--ochre) 42%,transparent);
+  transition:text-decoration-color .15s;
+}
+.post-body a:hover{text-decoration-color:var(--ochre)}
+
+.post-body ul,.post-body ol{padding-left:1.3em;margin:0 0 1.35em}
+.post-body li{margin-bottom:.5em}
+.post-body li::marker{color:var(--ochre)}
+
+.post-body blockquote{
+  margin:1.8em 0;padding:.15em 0 .15em 1.4em;
+  border-left:2px solid var(--ochre);
+  color:var(--chalk-dim);
+  font-style:italic;
+}
+.post-body blockquote p:last-child{margin-bottom:0}
+
+.post-body hr{
+  border:none;border-top:1px solid var(--line);
+  margin:2.6em 0;
+}
+
+.post-body code{
+  font-family:'Spline Sans Mono',monospace;
+  font-size:.88em;
+  background:var(--ink-2);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:.1em .35em;
+  color:var(--chalk);
+}
+.post-body pre{
+  background:var(--ink-2);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1rem 1.1rem;
+  overflow-x:auto;
+  font-size:.86em;
+  line-height:1.6;
+  margin:0 0 1.6em;
+}
+.post-body pre code{background:none;border:none;padding:0;font-size:1em}
+
+.post-body img{max-width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line)}
+.post-body figure{margin:2em 0}
+.post-body figcaption{
+  font-family:'Spline Sans Mono',monospace;font-size:.74rem;
+  color:var(--chalk-faint);margin-top:.6rem;letter-spacing:.03em;
+}
+
+/* tables can be wider than the measure — let them scroll, not the page */
+.post-body .table-scroll{overflow-x:auto;margin:0 0 1.6em}
+.post-body table{border-collapse:collapse;width:100%;font-size:.92em}
+.post-body th,.post-body td{
+  text-align:left;padding:.6em .8em;border-bottom:1px solid var(--line);
+}
+.post-body th{
+  font-family:'Spline Sans Mono',monospace;font-size:.76rem;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--chalk-faint);font-weight:500;
+}
+
+/* display math shouldn't force a horizontal page scroll on phones */
+.post-body mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;padding:.3em 0}
+
+/* end mark */
+.halmos{
+  color:var(--ochre);
+  font-size:1.1rem;
+  line-height:1;
+  margin:2.2rem 0 0;
+  opacity:.85;
+}
+
+/* ---------- prev / next ---------- */
+.post-nav{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;margin-top:clamp(2.5rem,5vw,4rem);
+  max-width:var(--measure);
+}
+.post-nav-item{
+  background:var(--ink);padding:1.15rem 1.25rem;
+  display:flex;flex-direction:column;gap:.35rem;
+  transition:background .18s;min-height:5.5rem;
+}
+a.post-nav-item:hover{background:var(--ink-2)}
+.post-nav-item .k{
+  font-family:'Spline Sans Mono',monospace;font-size:.72rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ochre);
+}
+.post-nav-item .t{font-family:'Fraunces',serif;font-size:1rem;line-height:1.25;color:var(--chalk)}
+.post-nav-item.next{text-align:right;align-items:flex-end}
+.post-nav-item.empty{pointer-events:none}
+@media (max-width:600px){
+  .post-nav{grid-template-columns:1fr}
+  .post-nav-item.next{text-align:left;align-items:flex-start}
+  .post-nav-item.empty{display:none}
+}
+
+.post-back{
+  margin:1.6rem 0 clamp(2.5rem,6vw,4.5rem);
+  font-family:'Spline Sans Mono',monospace;font-size:var(--step--1);
+}
+.post-back a{color:var(--chalk-dim)}
+.post-back a:hover{color:var(--ochre)}
