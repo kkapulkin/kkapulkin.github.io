@@ -43,7 +43,7 @@
 .lftr-sub{margin-top:1.9rem}
 
 /* ---------- masthead figure ---------- */
-.lftr-figure{padding:1.35rem 1.25rem 1.1rem}
+.lftr-figure{padding:1.35rem 1.25rem}
 .lftr-hero-svg{display:block;width:100%;height:auto}
 /* The open box ticks slowly anticlockwise. The offset is a whole number of
    dash periods (4 × 14) so the loop restarts without a visible jump. */
