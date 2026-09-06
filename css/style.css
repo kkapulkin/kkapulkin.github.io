@@ -289,12 +289,14 @@ p{margin:0 0 1rem}
 /* Each .pub is its own grid, so an `auto` date column is sized row by row.
    Publications get away with it because every .yr is a 4-digit year; these
    dates vary in length, so the column is pinned to keep the names aligned. */
-.pub.talk{grid-template-columns:7rem 1fr auto}
-.pub.talk .body .meta{margin-top:.15rem}
+.pub.talk{grid-template-columns:7.5rem 1fr auto}
+.pub.talk .body .meta{margin:.15rem 0 0}
 .tba{color:var(--chalk-faint);font-style:italic}
+/* the flag sits on its own line via a <br> in the markup rather than
+   display:block, so the break survives even on a stale stylesheet */
 .talk-flag{
-  display:block;font-family:'Spline Sans Mono',monospace;font-size:.7rem;
-  letter-spacing:.02em;color:var(--chalk-faint);margin-top:.2rem;
+  font-family:'Spline Sans Mono',monospace;font-size:.7rem;
+  letter-spacing:.02em;color:var(--chalk-faint);
 }
 
 .talk-abstract{margin-top:.6rem}
