@@ -285,6 +285,19 @@ p{margin:0 0 1rem}
   .pub .links{justify-content:flex-start}
 }
 
+/* ---------- frontiers ---------- */
+/* intro copy beside the series logo; the logo is a transparent PNG already
+   coloured for the dark ground, so it needs no frame or backdrop */
+.frontiers-intro{
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(2rem,4vw,3.5rem);align-items:center;
+}
+.frontiers-logo{display:block;width:100%;max-width:330px;height:auto;margin-inline:auto}
+@media (max-width:860px){
+  .frontiers-intro{grid-template-columns:1fr}
+  .frontiers-logo{max-width:250px;margin-top:1rem}
+}
+
 /* ---------- frontiers talk list ---------- */
 /* Each .pub is its own grid, so an `auto` date column is sized row by row.
    Publications get away with it because every .yr is a 4-digit year; these
