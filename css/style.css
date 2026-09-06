@@ -285,6 +285,36 @@ p{margin:0 0 1rem}
   .pub .links{justify-content:flex-start}
 }
 
+/* ---------- frontiers talk list ---------- */
+/* Each .pub is its own grid, so an `auto` date column is sized row by row.
+   Publications get away with it because every .yr is a 4-digit year; these
+   dates vary in length, so the column is pinned to keep the names aligned. */
+.pub.talk{grid-template-columns:7rem 1fr auto}
+.pub.talk .body .meta{margin-top:.15rem}
+.tba{color:var(--chalk-faint);font-style:italic}
+.talk-flag{
+  display:block;font-family:'Spline Sans Mono',monospace;font-size:.7rem;
+  letter-spacing:.02em;color:var(--chalk-faint);margin-top:.2rem;
+}
+
+.talk-abstract{margin-top:.6rem}
+.talk-abstract summary{
+  cursor:pointer;list-style:none;font-family:'Spline Sans Mono',monospace;font-size:.72rem;
+  letter-spacing:.03em;color:var(--chalk-dim);border:1px solid var(--line);border-radius:5px;
+  padding:.2rem .5rem;display:inline-flex;align-items:center;gap:.35rem;width:fit-content;transition:.15s;
+}
+.talk-abstract summary::-webkit-details-marker{display:none}
+.talk-abstract summary::after{content:"▾";transition:transform .15s}
+.talk-abstract[open] summary::after{transform:rotate(180deg)}
+.talk-abstract summary:hover{color:var(--ochre);border-color:var(--ochre)}
+.talk-abstract .prose{margin-top:.6rem}
+
+/* .pub.talk outranks the .pub rule in the 680px block above, so the
+   single-column collapse has to be restated at the same specificity */
+@media (max-width:680px){
+  .pub.talk{grid-template-columns:1fr}
+}
+
 /* filter chips */
 .filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.8rem}
 .chip{
