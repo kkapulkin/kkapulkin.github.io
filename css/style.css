@@ -312,17 +312,26 @@ p{margin:0 0 1rem}
   letter-spacing:.02em;color:var(--chalk-faint);
 }
 
-.talk-abstract{margin-top:.6rem}
-.talk-abstract summary{
+/* the talk title sits between the speaker's name and the meta lines */
+.pub.talk .body .talk-title{
+  font-family:'Fraunces',serif;font-style:italic;font-size:1rem;
+  color:var(--chalk);margin:0 0 .45rem;
+}
+
+/* abstract and bio share one disclosure style; they sit side by side, so the
+   second one gets a little breathing room rather than a full margin */
+.talk-abstract,.talk-bio{margin-top:.6rem}
+.talk-abstract+.talk-bio{margin-top:.4rem}
+.talk-abstract summary,.talk-bio summary{
   cursor:pointer;list-style:none;font-family:'Spline Sans Mono',monospace;font-size:.72rem;
   letter-spacing:.03em;color:var(--chalk-dim);border:1px solid var(--line);border-radius:5px;
   padding:.2rem .5rem;display:inline-flex;align-items:center;gap:.35rem;width:fit-content;transition:.15s;
 }
-.talk-abstract summary::-webkit-details-marker{display:none}
-.talk-abstract summary::after{content:"▾";transition:transform .15s}
-.talk-abstract[open] summary::after{transform:rotate(180deg)}
-.talk-abstract summary:hover{color:var(--ochre);border-color:var(--ochre)}
-.talk-abstract .prose{margin-top:.6rem}
+.talk-abstract summary::-webkit-details-marker,.talk-bio summary::-webkit-details-marker{display:none}
+.talk-abstract summary::after,.talk-bio summary::after{content:"▾";transition:transform .15s}
+.talk-abstract[open] summary::after,.talk-bio[open] summary::after{transform:rotate(180deg)}
+.talk-abstract summary:hover,.talk-bio summary:hover{color:var(--ochre);border-color:var(--ochre)}
+.talk-abstract .prose,.talk-bio .prose{margin-top:.6rem}
 
 /* .pub.talk outranks the .pub rule in the 680px block above, so the
    single-column collapse has to be restated at the same specificity */
