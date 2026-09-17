@@ -3,10 +3,7 @@ layout: post
 title: "Beamer must go"
 date: 2026-09-17
 summary: >-
-  Beamer makes several bad habits of mathematical exposition wonderfully
-  convenient. The objection isn't to the software but to the incentives:
-  a tool that makes some choices easy and others laborious shapes the talk
-  you end up giving.
+  Beamer makes carrying bad habits from writing papers to slide preparation easy. It's time to move on to software that incentivizes better exposition.
 ---
 
 If you want to eat fewer snacks, keeping a cupboard full of chocolate bars and chips makes the job harder. You can exercise restraint, but why arrange things so that you constantly have to? This is how I feel about Beamer, the LaTeX presentation class. It makes several bad habits of mathematical exposition wonderfully convenient, and resisting them becomes part of preparing every talk.
@@ -15,7 +12,7 @@ Yes, it is possible to give a good Beamer talk. I have seen it happen. My object
 
 I prefer blackboard talks. I find their pace easier to follow and to take notes from. But slides have plenty of legitimate uses, including carefully prepared diagrams or plots that would take too long to draw well on the board. The question is whether preparing and displaying the material this way helps the audience understand it. If the whole point is that you can pack more material into your allotted time, then you’re doing it wrong.
 
-When I do use slides, I choose Keynote. PowerPoint is another option worth trying. While Apple and Microsoft will survive without an influx of mathematicians; I am concerned about mathematicians who can explain their work well in conversation but lose that ability when preparing a slide deck.
+When I do use slides, I choose Keynote. PowerPoint is another option worth trying. While Apple and Microsoft will survive without an influx of mathematicians, I am concerned about mathematicians who can explain their work well in conversation but lose that ability when preparing a slide deck.
 
 While Beamer was designed for presentations, the problem is how easily it lets us carry paper-writing habits into them. When I read a paper, I can go back to remind myself what some notation means or stop to check a reference. In a talk, the speaker controls the pace. If I miss a definition, I must either interrupt or try to reconstruct it while the speaker moves on. Asking to see the definition again is a reasonable response. Better still would be a presentation that did not require me to keep so many definitions in my head.
 
