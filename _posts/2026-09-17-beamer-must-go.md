@@ -3,7 +3,7 @@ layout: post
 title: "Beamer must go"
 date: 2026-09-17
 summary: >-
-  Beamer makes carrying bad habits from writing papers to slide preparation easy. It's time to move on to software that incentivizes better exposition.
+  Beamer makes it easy to carry bad habits from writing papers into preparing slides. It's time to move on to software that incentivizes better exposition.
 ---
 
 If you want to eat fewer snacks, keeping a cupboard full of chocolate bars and chips makes the job harder. You can exercise restraint, but why arrange things so that you constantly have to? This is how I feel about Beamer, the LaTeX presentation class. It makes several bad habits of mathematical exposition wonderfully convenient, and resisting them becomes part of preparing every talk.
