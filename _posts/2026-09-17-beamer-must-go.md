@@ -1,0 +1,36 @@
+---
+layout: post
+title: "Beamer must go"
+date: 2026-09-17
+summary: >-
+  Beamer makes several bad habits of mathematical exposition wonderfully
+  convenient. The objection isn't to the software but to the incentives:
+  a tool that makes some choices easy and others laborious shapes the talk
+  you end up giving.
+---
+
+If you want to eat fewer snacks, keeping a cupboard full of chocolate bars and chips makes the job harder. You can exercise restraint, but why arrange things so that you constantly have to? This is how I feel about Beamer, the LaTeX presentation class. It makes several bad habits of mathematical exposition wonderfully convenient, and resisting them becomes part of preparing every talk.
+
+Yes, it is possible to give a good Beamer talk. I have seen it happen. My objection is about incentives: elaborate notation comes easily, an overcrowded slide need not interrupt your workflow, and experimenting with a different visual arrangement takes effort. A tool that makes these choices easy or difficult can influence the talk you end up giving.
+
+I prefer blackboard talks. I find their pace easier to follow and to take notes from. But slides have plenty of legitimate uses, including carefully prepared diagrams or plots that would take too long to draw well on the board. The question is whether preparing and displaying the material this way helps the audience understand it. If the whole point is that you can pack more material into your allotted time, then you’re doing it wrong.
+
+When I do use slides, I choose Keynote. PowerPoint is another option worth trying. While Apple and Microsoft will survive without an influx of mathematicians; I am concerned about mathematicians who can explain their work well in conversation but lose that ability when preparing a slide deck.
+
+While Beamer was designed for presentations, the problem is how easily it lets us carry paper-writing habits into them. When I read a paper, I can go back to remind myself what some notation means or stop to check a reference. In a talk, the speaker controls the pace. If I miss a definition, I must either interrupt or try to reconstruct it while the speaker moves on. Asking to see the definition again is a reasonable response. Better still would be a presentation that did not require me to keep so many definitions in my head.
+
+Consider notation. In Beamer, you can easily use L in three or four different fonts, with double subscripts and a superscript. The audience may not even notice that the fonts differ, let alone remember what each L means. In Keynote, I find adding elaborate mathematical notation less convenient. That inconvenience is useful: it makes me ask whether I need the notation at all. I try to get by with arrows, equivalence symbols, and a few others appropriate to the topic. This is a personal discipline, not a rule against formulas. A formula that carries the idea deserves its place; one that merely carries the paper’s bookkeeping may not.
+
+The second temptation is density. What matters is how large the text looks from the back of the room and how much the audience must absorb before you move on. A slide can compile perfectly while failing both tests. I see speakers behave as though a large block of text becomes available to the audience’s mind the instant it appears on the screen. It doesn’t, especially while the speaker is saying something else. In *The Elements of Style*, William Strunk Jr. recommends “Omit needless words.” Slides make that advice particularly urgent. I once saw a speaker escape Beamer’s default font size by, ironically, making it smaller, producing what was essentially an essay in bullet points. Some bullets only summarized the history of an idea instead of reviewing it in detail, a fact that the speaker aptly alerted us to by starting the bullet with the word “briefly.” This word does not belong on slides; the slides should always be brief without announcing it.
+
+The third temptation is to leave the visual structure alone. In Keynote, I can move text and diagrams around and see the result immediately. This encourages me to experiment: should these ideas appear side by side? Would a diagram explain their relationship better than a list? In Beamer, I find it easier to keep adding theorem, proof, and example blocks than to reconsider the arrangement. You can make excellent diagrams and conceptual summaries in LaTeX. My complaint is about the effort, including waiting however short time, required to get from the first arrangement to a better one.
+
+Animations are another case where the effort matters. Beamer can produce them, including animations embedded in a PDF, but getting them to play depends on a compatible viewer. This adds friction to both preparing the talk and presenting it. If an animation would help the audience see how a construction works, I want putting it on the screen to be straightforward. In Keynote, I find that much easier. Here again, Beamer makes something I want to do more laborious, while making it wonderfully easy to add another block of text.
+
+The obvious objection is that a bad speaker can fill PowerPoint with tiny text too. Of course. Changing software does not teach exposition. My claim is narrower: if your usual tool makes it easy to reproduce your paper, switching tools can interrupt that habit. You have to decide what to rebuild, and that is an opportunity to decide what the audience actually needs. The point of the switch is to change those decisions.
+
+Handwritten slides on a tablet can serve the same purpose. It is easy to sketch an arrangement, discard it, and draw another. On balance, I have found most handwritten slide talks better than most Beamer talks. Handwriting can also become tiny and overloaded with indices, so it offers no automatic protection. What I value is the invitation to compose the explanation visually.
+
+There is also a cost before you have said a word. I have seen so many bad Beamer talks that I roll my eyes when I walk into a seminar room and see one of the familiar Beamer themes, and I’m hardly the only one. That is unfair to a speaker who has prepared an excellent talk, but it is still my reaction and the reaction of many of my colleagues. The familiar layout brings other people’s talks into the room with you. Making the presentation feel like your own takes more work when its appearance has already reminded me of a dozen talks I struggled to follow.
+
+Young mathematicians in particular should care about this. You need to stand out and make your talks memorable. Your audience should leave with a clear idea of what you contributed and why it matters, and the way you present it should help that idea stick. A familiar Beamer theme gives you an appearance people recognize before they know anything about your work. Give them a presentation worth remembering as yours. You have done the work of finding something to say; don’t let the default template decide how you say it.
