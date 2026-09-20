@@ -3,16 +3,14 @@ layout: post
 title: "Talking about AI & Math"
 date: 2026-09-20
 summary: >-
-  I ran four anonymous polls at a workshop to get a whole room talking about AI
-  and mathematics, instead of the usual two or three voices. Here are the
-  questions, the results, and what they opened up.
+  A blueprint for discussions about AI & math.
 ---
 
 How can we have a productive discussion about AI and mathematics, a topic that’s become so polarizing and that carries existential consequences for our profession? Sounds cliché, I know, but it’s something we need to figure out. At a workshop last week, I ran such a discussion and have since received multiple requests for the questions, so I’m sharing them here in the hope that others will find the format useful.
 
 The workshop, “Homology and homotopy in the world of graphs,” was organized by Luigi Caputi and Henri Riihimäki at the EPFL Bernoulli Center. My only complaint was that the talks and informal discussions were so engaging that I didn’t have a chance to go hiking, the main reason to visit Switzerland in the first place. I gave a talk, “Introduction to discrete homotopy theory,” reporting on the work of my fantastic current and former students: Daniel Carranza, Sterling Ebel, Jacob Ender, and Nathan Kershaw. Daniel and Nathan also spoke at the workshop.
 
-I devoted the final slide of my talk to a topic close to my heart: artificial intelligence. My question for the audience was how we, as an area, should respond to AI, and what senior people can do to create jobs and opportunities for the next generation of discrete homotopy theorists. What might change about the work we do, and how should we prepare? I am confident that entire areas of mathematics will disappear and that the workflow of every single mathematician will be altered. The slide generated enough discussion that the organizers asked me to lead an evening conversation on AI & Math later in the week. I’m grateful to them for making space for it.
+I devoted the final slide of my talk to a topic close to my heart: artificial intelligence. My question for the audience was how we, as an area, should respond to AI, and what senior people can do to create jobs and opportunities for the next generation of discrete homotopy theorists. What might change about the work we do, and how should we prepare? The slide generated enough discussion that the organizers asked me to lead an evening conversation on AI & Math later in the week. I’m grateful to them for making space for it.
 
 The mathematics community is failing to have this discussion in a reasonable format. Established events and publications continue to approach top mathematicians for their views on the subject, but mathematical distinction alone, measured, say, in the number of Annals papers, does not establish expertise about AI. For comparison, in his March 1996 essay for Time, Garry Kasparov described Deep Blue’s intelligence as weird, inefficient, and inflexible, concluding that he had a few years left. He lost the rematch the following year. In February 1995, Clifford Stoll wrote a piece for Newsweek, “The Internet? Bah!”, dismissing the prospects of online shopping and buying books and newspapers over the Internet. It’s hard to shake off the feeling that the mathematical community looks to these examples now and says “hold my beer.”
 
