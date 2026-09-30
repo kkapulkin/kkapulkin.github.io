@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Frontiers of Mathematics and Computing — Chris Kapulkin</title>
 <meta name="description" content="Frontiers of Mathematics and Computing — a lecture series organized jointly by Vanderbilt's Department of Mathematics and College of Connected Computing.">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 
@@ -51,6 +51,19 @@
      there to keep long ones from stretching the list.
 
      See the September 28 row for a filled-in example.
+
+     TO MOVE THE SPOTLIGHT ON after a talk has been given:
+
+       - the talk just past: add `past` to its row's classes
+         (<div class="pub talk past">), flag the date
+         September 28<br><span class="talk-flag">past</span>, drop the
+         office-hours line, and close its abstract (remove `open`)
+       - the talk coming up: add `next` to its row's classes, flag the
+         date October 5<br><span class="talk-next">next talk</span>, and
+         add `open` to its <details class="talk-abstract"> so the
+         abstract shows without a click
+
+     Only one row carries each marker.
      ============================================================ -->
 
 <header class="site-nav">
@@ -100,14 +113,12 @@
     <div class="section-head reveal in"><p class="eyebrow">2026–27 talks</p></div>
     <div class="pub-list reveal in">
 
-      <div class="pub talk">
-        <span class="yr">September 28</span>
+      <div class="pub talk past">
+        <span class="yr">September 28<br><span class="talk-flag">past</span></span>
         <div class="body">
           <h3>Vasily Ilin <span style="color:var(--chalk-faint)">(Axiom)</span></h3>
           <p class="talk-title">Formalizing All Math</p>
-          <p class="meta">Time 4:00 pm</p>
           <p class="meta">Room Stevenson Center 1206</p>
-          <p class="meta">Office hours <span class="tba">TBA</span></p>
           <details class="talk-abstract">
             <summary>Abstract</summary>
             <div class="prose"><p>How to formalize all math and why do it? We will attempt to answer this question and discuss the recent progress in mathematical autoformalization.</p></div>
@@ -119,15 +130,15 @@
         </div>
       </div>
 
-      <div class="pub talk">
-        <span class="yr">October 5</span>
+      <div class="pub talk next">
+        <span class="yr">October 5<br><span class="talk-next">next talk</span></span>
         <div class="body">
           <h3>Alex Kontorovich <span style="color:var(--chalk-faint)">(Rutgers University)</span></h3>
           <p class="talk-title">Interactions of Formalization, AI, and mathematics</p>
           <p class="meta">Time 4:00 pm</p>
           <p class="meta">Room Stevenson Center 1206</p>
           <p class="meta">Office hours <span class="tba">TBA</span></p>
-          <details class="talk-abstract">
+          <details class="talk-abstract" open>
             <summary>Abstract</summary>
             <div class="prose"><p>We&rsquo;ll discuss Lean verification, reliability, and related issues as they pertain to evaluating mathematics produced with/by AI.</p></div>
           </details>

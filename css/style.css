@@ -312,6 +312,16 @@ p{margin:0 0 1rem}
   letter-spacing:.02em;color:var(--chalk-faint);
 }
 
+/* the next talk carries an ochre flag on the same second line as .talk-flag;
+   talks already given keep their abstracts but drop back to chalk */
+.talk-next{
+  font-family:'Spline Sans Mono',monospace;font-size:.7rem;
+  letter-spacing:.02em;color:var(--ochre);
+}
+.pub.talk.past .yr{color:var(--chalk-faint)}
+.pub.talk.past .body h3,
+.pub.talk.past .body .talk-title{color:var(--chalk-dim)}
+
 /* the talk title sits between the speaker's name and the meta lines */
 .pub.talk .body .talk-title{
   font-family:'Fraunces',serif;font-style:italic;font-size:1rem;
