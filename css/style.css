@@ -322,6 +322,15 @@ p{margin:0 0 1rem}
 .pub.talk.past .body h3,
 .pub.talk.past .body .talk-title{color:var(--chalk-dim)}
 
+/* academic-year heading inside the past-talks list: quieter than the section
+   eyebrow above it, since it labels a group rather than a section */
+.talk-year{
+  font-family:'Spline Sans Mono',monospace;font-size:.78rem;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--chalk-dim);margin:0 0 .8rem;
+}
+.pub-list+.talk-year{margin-top:2.5rem}
+
 /* the talk title sits between the speaker's name and the meta lines */
 .pub.talk .body .talk-title{
   font-family:'Fraunces',serif;font-style:italic;font-size:1rem;

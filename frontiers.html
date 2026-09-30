@@ -5,14 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Frontiers of Mathematics and Computing — Chris Kapulkin</title>
 <meta name="description" content="Frontiers of Mathematics and Computing — a lecture series organized jointly by Vanderbilt's Department of Mathematics and College of Connected Computing.">
-<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
 
 <!-- ============================================================
      HOW TO ADD OR UPDATE A TALK
 
-     Each talk is one .pub.talk row inside .pub-list. To add one,
+     The page holds two lists: UPCOMING TALKS at the top, and PAST
+     TALKS at the bottom, grouped by academic year with the oldest
+     year first. Within each list, rows run in chronological order;
+     Sep–Dec are 2026 and Jan–May are 2027 (academic year).
+
+     Each talk is one .pub.talk row inside a .pub-list. To add one,
      copy an existing row and edit five things:
 
        1. <span class="yr">      the date, month spelled out, e.g.
@@ -26,9 +31,6 @@
                                   the time, e.g. 4:10–5:00 pm
        4. Room line               same idea, e.g. SC 1432
        5. Office hours line       same idea, e.g. 2:00–3:00 pm, SC 1425
-
-     Rows are listed in chronological order; Sep–Dec are 2026 and
-     Jan–May are 2027 (academic year).
 
      TO ADD A TITLE, put it directly under the <h3>:
 
@@ -50,20 +52,26 @@
      a plain <p class="meta"> instead — the <details> disclosure is
      there to keep long ones from stretching the list.
 
-     See the September 28 row for a filled-in example.
+     See the Vasily Ilin row in PAST TALKS for a filled-in example.
 
      TO MOVE THE SPOTLIGHT ON after a talk has been given:
 
-       - the talk just past: add `past` to its row's classes
-         (<div class="pub talk past">), flag the date
-         September 28<br><span class="talk-flag">past</span>, drop the
-         office-hours line, and close its abstract (remove `open`)
+       - the talk just past: move its row out of the upcoming list and
+         into the past list, under the right academic year (append it —
+         that list runs oldest first); add `past` to its row's classes
+         (<div class="pub talk past">), drop the `next` flag, the time
+         line and the office-hours line, and close its abstract
+         (remove `open`)
        - the talk coming up: add `next` to its row's classes, flag the
          date October 5<br><span class="talk-next">next talk</span>, and
          add `open` to its <details class="talk-abstract"> so the
          abstract shows without a click
 
-     Only one row carries each marker.
+     Only one row carries the `next` marker.
+
+     TO START A NEW ACADEMIC YEAR in the past list, add another
+     <p class="talk-year"> heading plus its own .pub-list, after the
+     existing ones.
      ============================================================ -->
 
 <header class="site-nav">
@@ -107,28 +115,11 @@
 
 <hr class="rule">
 
-<!-- TALKS -->
+<!-- UPCOMING TALKS -->
 <section>
   <div class="wrap">
-    <div class="section-head reveal in"><p class="eyebrow">2026–27 talks</p></div>
+    <div class="section-head reveal in"><p class="eyebrow">Upcoming talks</p></div>
     <div class="pub-list reveal in">
-
-      <div class="pub talk past">
-        <span class="yr">September 28<br><span class="talk-flag">past</span></span>
-        <div class="body">
-          <h3>Vasily Ilin <span style="color:var(--chalk-faint)">(Axiom)</span></h3>
-          <p class="talk-title">Formalizing All Math</p>
-          <p class="meta">Room Stevenson Center 1206</p>
-          <details class="talk-abstract">
-            <summary>Abstract</summary>
-            <div class="prose"><p>How to formalize all math and why do it? We will attempt to answer this question and discuss the recent progress in mathematical autoformalization.</p></div>
-          </details>
-          <details class="talk-bio">
-            <summary>Speaker bio</summary>
-            <div class="prose"><p>Vasily Ilin obtained his PhD in math from the University of Washington in 2026. He founded the UW Math AI Lab and led several AI-for-math projects such as TheoremSearch, TheoremGraph, APRIL, Landau autoformalization, Sorrys are not the hard part, and formalizing numerical analysis. Vasily now works on autoformalization at Axiom Math, where he recently led the effort to obtain the highest position on the LeanEval leaderboard.</p></div>
-          </details>
-        </div>
-      </div>
 
       <div class="pub talk next">
         <span class="yr">October 5<br><span class="talk-next">next talk</span></span>
@@ -181,6 +172,16 @@
       </div>
 
       <div class="pub talk">
+        <span class="yr">February 1</span>
+        <div class="body">
+          <h3>Jordan Ellenberg <span style="color:var(--chalk-faint)">(University of Wisconsin–Madison)</span></h3>
+          <p class="meta">Time 4:00 pm</p>
+          <p class="meta">Room Stevenson Center 1206</p>
+          <p class="meta">Office hours <span class="tba">TBA</span></p>
+        </div>
+      </div>
+
+      <div class="pub talk">
         <span class="yr">February 8</span>
         <div class="body">
           <h3>Rachel Ward <span style="color:var(--chalk-faint)">(University of Texas at Austin)</span></h3>
@@ -201,12 +202,43 @@
       </div>
 
       <div class="pub talk">
-        <span class="yr">February<br><span class="talk-flag">date TBD</span></span>
+        <span class="yr">March<br><span class="talk-flag">date TBD</span></span>
         <div class="body">
-          <h3>Jordan Ellenberg <span style="color:var(--chalk-faint)">(University of Wisconsin–Madison)</span></h3>
+          <h3>Talia Ringer <span style="color:var(--chalk-faint)">(University of Illinois Urbana–Champaign)</span></h3>
           <p class="meta">Time 4:00 pm</p>
           <p class="meta">Room Stevenson Center 1206</p>
           <p class="meta">Office hours <span class="tba">TBA</span></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- PAST TALKS — oldest academic year first -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal"><p class="eyebrow">Past talks</p></div>
+
+    <p class="talk-year reveal">2026–27</p>
+    <div class="pub-list reveal">
+
+      <div class="pub talk past">
+        <span class="yr">September 28</span>
+        <div class="body">
+          <h3>Vasily Ilin <span style="color:var(--chalk-faint)">(Axiom)</span></h3>
+          <p class="talk-title">Formalizing All Math</p>
+          <p class="meta">Room Stevenson Center 1206</p>
+          <details class="talk-abstract">
+            <summary>Abstract</summary>
+            <div class="prose"><p>How to formalize all math and why do it? We will attempt to answer this question and discuss the recent progress in mathematical autoformalization.</p></div>
+          </details>
+          <details class="talk-bio">
+            <summary>Speaker bio</summary>
+            <div class="prose"><p>Vasily Ilin obtained his PhD in math from the University of Washington in 2026. He founded the UW Math AI Lab and led several AI-for-math projects such as TheoremSearch, TheoremGraph, APRIL, Landau autoformalization, Sorrys are not the hard part, and formalizing numerical analysis. Vasily now works on autoformalization at Axiom Math, where he recently led the effort to obtain the highest position on the LeanEval leaderboard.</p></div>
+          </details>
         </div>
       </div>
 
